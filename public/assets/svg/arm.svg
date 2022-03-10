@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 105 30.72">
+    <defs>
+        <style>.a{fill:none;}.b{clip-path:url(#a);}.c{fill:#67328f;fill-rule:evenodd;}</style>
+        <clipPath id="a" transform="translate(-89.42 -202.23)">
+            <rect class="a" x="89.42" y="202.23" width="105" height="30.72"/>
+        </clipPath>
+    </defs>
+    <g class="b">
+        <g class="b">
+            <path class="c"
+                  d="M181.83,202.23a12.57,12.57,0,1,1-8.9,21.46l-2.29-3.39-28.19,7-1.14,2.54a7.51,7.51,0,0,1-13.5-3v-.06l-38.39-17,2.27-5.13,37.39,16.53,0,0a7.52,7.52,0,0,1,12.45.37l0,.26,27.66-6.85v-.06a12.57,12.57,0,0,1,12.58-12.57"
+                  transform="translate(-89.42 -202.23)"/>
+        </g>
+    </g>
+</svg>

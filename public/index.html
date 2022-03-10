@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico"/>
+        <link href="/assets/images/favicon.png" rel="icon"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="theme-color" content="#fff"/>
+        <meta content="#6307c0" name="apple-mobile-web-app-status-bar-style"/>
+        <meta content="#6307c0" name="msapplication-navbutton-color"/>
+        <meta content="#6307c0" name="msapplication-TileColor"/>
+        <meta name="description" content=""/>
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png"/>
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
+        <title>bpp</title>
+
+        <meta content="________________________" name="description"/>
+        <meta content="BPP" name="keywords"/>
+        <meta property="og:type" content="WebSite"/>
+        <meta property="og:image" content=""/>
+        <meta content="summary_large_image" name="twitter:card"/>
+        <meta content="@_______" name="twitter:creator"/>
+
+        <link href="/assets/styles/style.css" rel="stylesheet"/>
+        <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet"/>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+        <script src="/assets/scripts/threeExample.js"></script>
+        <script src="/assets/scripts/particle.js"></script>
+        <script src="/assets/scripts/coupon.js"></script>
+        <script src="/assets/scripts/loading.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
+        <script src="https://unpkg.com/three@0.131.3/build/three.min.js"></script>
+        <script src="https://unpkg.com/embeddable-nfts/dist/nft-card.min.js"></script>
+
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PTB5KQVCQ6"></script>
+        <script>
+          // todo gtmへ
+          window.dataLayer = window.dataLayer || [];
+
+          function gtag() {dataLayer.push( arguments );}
+
+          gtag( 'js', new Date() );
+
+          gtag( 'config', 'G-PTB5KQVCQ6' );
+        </script>
+    </head>
+
+    <body>
+<!--        <div id="nnn1" style=" width: 10px; height: 100vh; background: #fff; position: fixed; z-index: 33; "></div>-->
+<!--        <div id="nnn2" style=" width: 10px; height: 100vh; background: #fff; position: fixed; z-index: 33; right: 0"></div>-->
+        <noscript>we need to enable JavaScript to run this bpp.</noscript>
+        <div id="root"></div>
+    </body>
+
+    <style>
+        button {
+            background: unset;
+        }
+
+        footer {
+            border: 0;
+            box-shadow: 0 0 3px #eee;
+            min-height: 55px;
+            z-index: var(--fixedBrowserUI);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border-radius: 1rem 1rem 0 0;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--colorPerple);
+            font-weight: bold;
+            box-sizing: border-box;
+            padding: 1rem;
+            background: #fff url(/assets/svg/arm.svg) no-repeat -12% 39% / 23% 62%;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 760px) {
+            footer a {
+                visibility: hidden;
+            }
+        }
+
+        footer .thanksMember {
+            transition-property: height, visibility, opacity;
+            transition-duration: 0.8s, 1s;
+            height: 0;
+            visibility: hidden;
+            opacity: 0;
+            width: 100%;
+        }
+
+        footer .thanksMemberAffectShown {
+            padding: 5rem;
+            transition-property: height, visibility, opacity;
+            transition-duration: 0.8s, 1s;
+            height: 10rem;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        footer #showThanksMember {
+            -webkit-appearance: none;
+            border: none;
+        }
+
+        .rotate180 {
+            transform: rotate(180deg);
+        }
+    </style>
+
+</html>

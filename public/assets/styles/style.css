@@ -1,0 +1,526 @@
+:root {
+    --fixedBrowserSPLASH: 102;
+    --fixedBrowserUI: 101;
+
+    --onTheMainContent: 100;
+    --mainContent: 99;
+    --snowDrowpLayer: 97;
+
+    --colorBlack: #000;
+    --colorPerple: #620abf;
+    --colorPerpleDark: #28054f;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+    background: var(--colorBlack);
+}
+
+ul {
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.m1 {
+    margin: 1rem;
+}
+
+.m3 {
+    margin: 3rem;
+}
+
+.mt5 {
+    margin-top: 5rem;
+}
+
+.p1 {
+    padding: 1rem;
+}
+
+.p2 {
+    padding: 2rem;
+}
+
+.p3 {
+    padding: 3rem;
+}
+
+.pt0 {
+    padding-top: 0;
+}
+
+html {
+    font-size: 16px;
+    background: #fff;
+}
+
+#youtubeWrap {
+    display: flex;
+}
+
+#youtubeWrapL {
+    position: fixed;
+    z-index: 1;
+}
+
+#youtubeWrapR {
+    position: fixed;
+    z-index: 2;
+
+}
+
+/*
+#youtubeWrapL .wallUpper {
+    position: absolute;
+    width: 200px;
+    height: 100vh;
+    background: url(/assets/svg/cloud_white.svg) 80% 20% / cover repeat-y;
+}
+
+#youtubeWrapL .wallUnder {
+    position: absolute;
+    width: 300px;
+    height: 100vh;
+    background: url(/assets/svg/cloud_perple.svg) 90% / cover;
+}
+
+#youtubeWrapR .wallUpper {
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    right: 0;
+    background: url(/assets/svg/cloud_white.svg) 20% / cover;
+}
+
+#youtubeWrapR .wallUnder {
+    position: fixed;
+    width: 568px;
+    height: 100vh;
+    right: 0;
+    background: url(/assets/svg/cloud_perple.svg) 90% / cover;
+    transform: rotate3d(0, 0, 1, 180deg);
+    margin-top: -10rem;
+}
+
+ */
+
+.hide {
+    transition-property: opacity, visibility;
+    transition-duration: 0.5s, 0.3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.hide1s {
+    transition-property: opacity, visibility;
+    transition-duration: 1s, 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.hide2s {
+    transition-property: opacity, visibility;
+    transition-duration: 2s, 2s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.hide5s {
+    transition-duration: 5s, 5s;
+    transition-property: opacity, visibility;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.expand1s {
+    transition-duration: 0.3s, 2s, 1.5s;
+    transition-timing-function: ease-out;
+    transition-property: width, background-color, height;
+    width: 100%;
+    background-color: #000;
+}
+
+
+nav {
+    height: 60px;
+    background: #fff;
+    z-index: var(--fixedBrowserUI);
+    top: 0;
+    position: fixed;
+    width: 100%;
+    border-radius: 0 0 1rem 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--colorPerple);
+    font-weight: bold;
+    padding-right: 3rem;
+    box-sizing: border-box;
+}
+
+.link {
+    font-size: 0.8rem;
+}
+
+.link a {
+    text-decoration: none;
+    padding: 1rem 0.2rem;
+    font-weight: 100;
+}
+
+.link a:hover {
+    text-decoration: underline;
+    padding: 1rem 0.2rem;
+}
+
+@media (max-width: 760px) {
+    html {
+        background: #fff;
+    }
+}
+
+.t_w {
+    color: var(--colorPerpleDark);
+    text-decoration: none;
+}
+
+.message {
+    line-height: 2rem;
+    box-sizing: border-box;
+    padding: 1rem;
+    word-spacing: 5px;
+    color: #620ac0bf;
+    word-break: break-all;
+}
+
+#backgroundYoutubePlayer {
+    transition-property: opacity;
+    transition-duration: 2s, 3s;
+    position: fixed;
+    min-width: 100%;
+    min-height: calc(100vw * 0.5625);
+    width: auto;
+    margin-top: 20px;
+    height: auto;
+    pointer-events: none;
+}
+
+
+/** 1024pxを堺に小型デバイスのみ、ある程度スクロールすると背景動画は小型化して右下へ **/
+@media (max-width: 1024px) {
+    .backgroundYoutubePlayerScrolled {
+        position: fixed;
+        z-index: var(--fixedBrowserUI);
+        bottom: 2rem;
+        transform: scale(0.5) translateX(40vw);
+    }
+
+    .backgroundYoutubePlayerScrolled iframe {
+        border: 3px solid #fff;
+        border-radius: 1rem;
+    }
+}
+
+header {
+    border-radius: 1rem;
+    margin: 0 auto;
+    height: calc(100vw * 0.5625 + 5rem);
+}
+
+.samePlanets {
+    height: 5rem;
+    text-align: center;
+}
+
+.activity {
+    background: #fff;
+    border-radius: 2rem;
+}
+
+.m0 {
+    margin: 0;
+}
+
+.activity p {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.stickyBackground {
+    margin: 5rem auto;
+    text-align: center;
+}
+
+.logo_img {
+    background: #fff;
+    border-radius: 2rem;
+    padding: 0 0.5rem 0 0;
+    margin: 0.5rem;
+    border: 3px solid var(--colorPerple);
+    width: calc(100vw * 0.2);
+    max-width: 80px;
+    background-blend-mode: color-burn;
+}
+
+#main_home {
+    z-index: var(--mainContent);
+    background: linear-gradient(#6208bf00, #7d00ff80);
+    position: relative;
+    padding: 0 2rem 10rem;
+}
+
+
+#main {
+    z-index: var(--mainContent);
+    background: linear-gradient(#6208bf00, #7d00ff80);
+    position: relative;
+    border-radius: 1rem 1rem 0 0;
+    line-height: 1.5rem;
+    min-height: 60vh;
+    padding: 100px 2rem 10rem;
+}
+
+body {
+    background: #fff;
+    height: 100vh;
+    margin: 0;
+    font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.headerMain {
+    text-shadow: 0 0 0 rgb(255 255 255), 0 0 1px rgb(0 0 0 / 85%);
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+h2 {
+    padding: 2rem 1rem 1rem 2rem;
+    color: var(--colorPerple);
+    position: relative;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.activity_nftCard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.activity_contents {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.donationRecord {
+    border-radius: 1rem;
+    line-height: 3;
+    padding: 0.5rem;
+    color: #fff;
+    width: 80%;
+    margin: 1rem;
+    height: 3rem;
+    background: #827;
+}
+
+nft-card {
+    overflow: hidden
+}
+
+.star {
+    width: 1rem;
+}
+
+#overWallCover {
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: var(--fixedBrowserSPLASH);
+}
+
+#overWallCoverInner {
+    width: 94%;
+    justify-content: center;
+    height: 90%;
+    background: var(--colorPerpleDark);
+    border: 1px solid var(--colorPerple);
+    border-radius: 1rem;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+#overWallCover img {
+    width: calc(100vw / 4);
+    border-radius: 5rem;
+}
+
+#overWallCover p {
+    width: 100%;
+    color: #fff;
+    font-weight: 100;
+    text-align: center;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: var(--snowDrowpLayer);
+    /*background-image: url("");*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.circleRotateClassWrap {
+    position: fixed;
+    width: 100%;
+    padding-top: calc(100vh / 8);
+    overflow: hidden;
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.circleRotateClassWrapInnterText {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 0 3px 5px #c3c2c2;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+}
+
+.runrunrunrunrunrunrunrunrun {
+    background: url(/assets/images/logo_image.png) 00% 60% / 100% 100% no-repeat;
+    position: fixed;
+    z-index: 101;
+    width: 30px;
+    height: 30px;
+    top: 47rem;
+    animation: kurukuru_phase2 10s linear 0.1s infinite;
+    transform-origin: center;
+}
+
+.gandam-transform {
+    background: url('/assets/svg/gandam.svg') no-repeat;
+    height: 250px;
+    width: 250px;
+    transform-origin: 50% 50%;
+    perspective: 100px;
+    animation: kurukuru_phase2 40s linear 0.1s infinite;
+    transform-style: preserve-3d;
+    perspective-origin: 10% 10%;
+}
+
+/*transform: rotateX(-132deg) rotateY(-310deg) rotateZ(-320deg) translate3d(-79px, 37px, -174px) scale3d(1.84, 2.15, 2.39);*/
+
+@keyframes kurukuru_phase2 {
+    0% {
+        opacity: 0.2;
+        transform: scale(5);
+    }
+    /*0.05% {*/
+    /*    transform: scale(4.7) rotateZ(-14.4deg);*/
+    /*}*/
+    /*5% {*/
+    /*    transform: scale(5) rotateZ(-18.0deg);*/
+    /*}*/
+    50% {
+        opacity: 1;
+        transform: scale(4) rotateZ(-180.0deg);
+    }
+    80% {
+        transform: scale(5) rotateZ(-308.0deg);
+    }
+    100% {
+        opacity: 0.2;
+        transform: scale(5) rotateZ(-360.0deg);
+    }
+}
+
+.smallSizeMobileOnlyContent {
+    text-align: center;
+    color: #fff;
+    margin: 1rem;
+}
+
+
+.aa {
+    height: 38%;
+    /*background: #777a;*/
+    display: flex;
+}
+
+.bb {
+    width: 25%;
+    /*background: #872a;*/
+}
+
+.cc {
+    /*background: #fff;*/
+    width: 60px;
+    margin: 7px 11px;
+    border-radius: 2rem;
+}
+
+.dd {
+    font-weight: bold;
+    width: 75%;
+    padding: 30px 40px 13px 35px;
+    color: #eee;
+    font-size: 1.1rem;
+    /*background: #d723;*/
+    word-break: break-all;
+    line-height: 1.3rem;
+}
+
+.ee {
+    height: 62%;
+    /*background: #777a*/
+}
+
+.ff {
+    margin: 0 auto;
+    letter-spacing: 1px;
+    max-height: 3rem;
+    overflow: hidden;
+    padding: 12px 1.5rem;
+    color: var(--colorPerpleDark);
+    text-shadow: 0 0 1px var(--colorPerple);
+    /*background: #d723;*/
+    word-break: break-all;
+    line-height: 1.7rem;
+    font-size: 0.9rem;
+}
+
+.gg {
+    background: url(/assets/svg/waku.svg) no-repeat;
+    height: 186px;
+    width: 326px;
+}
