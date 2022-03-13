@@ -1,7 +1,18 @@
-import { useEffect } from 'react';
+import { useEffect, useContext, useState } from 'react';
 import YouTube from 'react-youtube';
+import { SpreadSheetContext } from '../App';
+
 
 const Main = () => {
+
+  const sheetData = useContext( SpreadSheetContext );
+
+  const [ newRelease, setNewRelease ] = useState( [] );
+
+  useEffect( () => {
+    setNewRelease( sheetData.newreleases );
+    console.log( "newRelease:", sheetData.newreleases );
+  }, [ sheetData ] );
 
   useEffect( () => {
     const date = new Date();
@@ -96,78 +107,25 @@ const Main = () => {
       </div>
 
       <div id={ "main_home" } className="mt4 pt0">
-        <section className="activity">
-          <h2>BPP</h2>
-          <div className={ "p2" }>
-            <div className="message">
-              ●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■
-              ●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■
-              ●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■
-
-
-            </div>
-          </div>
-        </section>
-
-        <section className="activity">
-          <h2>BlenderへのTransaction履歴</h2>
-          <div className={ "p2" }>
-            <div className="message">
-              ●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■
-              ●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■
-              ●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■
-
-            </div>
-          </div>
-        </section>
-
-        <section className="activity">
-          <h2>●×▲■</h2>
-          <div className={ "p2" }>
-            <div className="message">
-              ●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■
-              ●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■
-              ●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■
-            </div>
-          </div>
-        </section>
-
-        <section className="activity">
-          <h2>●×▲■</h2>
-          <div className={ "p2" }>
-            <div className="message">
-              ●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■
-              ●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■
-              ●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■
-              ●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■
-            </div>
-          </div>
-        </section>
-
-        <section className="activity">
-          <h2>●×▲■</h2>
-          <div className={ "p2" }>
-            <div className="message">
-              ●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■
-              ●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■
-              ●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■
-              ●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■
-            </div>
-          </div>
-        </section>
-
-        <section className="activity">
-          <h2>●×▲■</h2>
-          <div className={ "p2" }>
-            <div className="message">
-              ●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■
-              ●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■
-              ●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■
-              ●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■●×▲■
-            </div>
-          </div>
-        </section>
-
+        {
+          newRelease ?
+            newRelease.map( v => {
+              console.log( v );
+              return (
+                <>
+                  <section className="activity">
+                    <h2>{ v[ 1 ] }</h2>
+                    <div className={ "p2" }>
+                      <div className="message">
+                        { v[ 2 ] }
+                      </div>
+                    </div>
+                  </section>
+                </>
+              );
+            } )
+            : <></>
+        }
       </div>
     </>
   );
