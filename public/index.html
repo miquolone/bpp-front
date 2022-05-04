@@ -14,6 +14,14 @@
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
         <title>bpp</title>
 
+<!--        wsのアドレスはdockerを立ち上げたらサーバができるので、それを使う-->
+<!--        <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>-->
+<!--        <script>-->
+<!--          var Web3 = require( 'web3' );-->
+<!--          // "Web3.givenProvider" will be set if in an Ethereum supported browser.-->
+<!--          var web3 = new Web3( Web3.givenProvider || 'ws://some.local-or-remote.node:8546' );-->
+<!--        </script>-->
+
         <meta content="________________________" name="description"/>
         <meta content="BPP" name="keywords"/>
         <meta property="og:type" content="WebSite"/>
@@ -51,8 +59,8 @@
     </head>
 
     <body>
-<!--        <div id="nnn1" style=" width: 10px; height: 100vh; background: #fff; position: fixed; z-index: 33; "></div>-->
-<!--        <div id="nnn2" style=" width: 10px; height: 100vh; background: #fff; position: fixed; z-index: 33; right: 0"></div>-->
+        <!--        <div id="nnn1" style=" width: 10px; height: 100vh; background: #fff; position: fixed; z-index: 33; "></div>-->
+        <!--        <div id="nnn2" style=" width: 10px; height: 100vh; background: #fff; position: fixed; z-index: 33; right: 0"></div>-->
         <noscript>we need to enable JavaScript to run this bpp.</noscript>
         <div id="root"></div>
     </body>
