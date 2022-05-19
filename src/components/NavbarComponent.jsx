@@ -9,7 +9,6 @@ const NavbarComponent = () => {
         <div className={ "link" }>
           <Link to={ "/" }> HOME </Link>
           <Link to={ "/STORE" }> STORE </Link>
-          <Link to={ "/MEMBER" }> MEMBER </Link>
         </div>
       </nav>
     </>
