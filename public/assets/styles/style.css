@@ -9,6 +9,8 @@
     --colorBlack: #000;
     --colorPerple: #620abf;
     --colorPerpleDark: #28054f;
+    accent-color: #004444;
+    color-scheme: light dark;
 }
 
 code {
