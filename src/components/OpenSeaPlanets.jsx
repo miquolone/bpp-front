@@ -15,7 +15,7 @@ const OpenSeaPlanets = () => {
             sheetData.planets?.map( (v) => {
               try {
                 const url = new URL( v[ 2 ] );
-                const patternResolve = url.pathname.match( new RegExp( /.*assets\/(0x.*?)\/(.*)/ ) );
+                const patternResolve = url.pathname.match( new RegExp( /.*assets\/ethereum\/(0x.*?)\/(.*)/ ) );
                 if ( patternResolve ) {
                   const [ , contractAddress, tokenId ] = patternResolve;
                   return (
