@@ -33,34 +33,34 @@ function App() {
       console.log( res );
       setSheetData( res.data );
     } );
-  }, [ setSheetData, ] );
+  }, [ setSheetData ] );
 
   return (
-    <SpreadSheetContext.Provider value={ sheetData}>
-    <AirtableContext.Provider value={ airtableData }>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={ <Home/> }>
-            <Route index element={ <MainComponent/> }/>
-            <Route path="store" element={ <StoreComponent/> }>
-              <Route path=":nftId" element={ <StoreComponent/> }/>
+    <SpreadSheetContext.Provider value={ sheetData }>
+      <AirtableContext.Provider value={ airtableData }>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={ <Home/> }>
+              <Route index element={ <MainComponent/> }/>
+              <Route path="store" element={ <StoreComponent/> }>
+                <Route path=":nftId" element={ <StoreComponent/> }/>
+              </Route>
+              <Route path="member" element={ <MemberComponent/> }>
+                <Route path=":name" element={ <MemberComponent/> }/>
+              </Route>
+              <Route path="transaction" element={ <TransactionComponent/> }>
+                <Route path=":hash" element={ <TransactionComponent/> }/>
+              </Route>
+              <Route path="organize" element={ <OrganizeComponent/> }>
+                <Route path=":hash" element={ <OrganizeComponent/> }/>
+              </Route>
+              <Route path="contact" element={ <ContactComponent/> }>
+                <Route path=":hash" element={ <ContactComponent/> }/>
+              </Route>
             </Route>
-            <Route path="member" element={ <MemberComponent/> }>
-              <Route path=":name" element={ <MemberComponent/> }/>
-            </Route>
-            <Route path="transaction" element={ <TransactionComponent/> }>
-              <Route path=":hash" element={ <TransactionComponent/> }/>
-            </Route>
-            <Route path="organize" element={ <OrganizeComponent/> }>
-              <Route path=":hash" element={ <OrganizeComponent/> }/>
-            </Route>
-            <Route path="contact" element={ <ContactComponent/> }>
-              <Route path=":hash" element={ <ContactComponent/> }/>
-            </Route>
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </AirtableContext.Provider>
+          </Routes>
+        </BrowserRouter>
+      </AirtableContext.Provider>
     </SpreadSheetContext.Provider>
   );
 }
