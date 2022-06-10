@@ -19,14 +19,39 @@
     "web-vitals": "^2.1.4",
     "web3": "^1.7.3"
   },
+
   "scripts": {
-    "esbuild": "esbuild src/App.jsx --bundle --outfile=out.js",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src >2"
+    "esbuild": "wireit",
+    "start": "wireit",
+    "build": "wireit",
+    "test": "wireit",
+    "eject": "wireit",
+    "lint": "wireit",
+    "vercel": "wireit",
+    "wrangler": "wireit",
+    "netlify": "wireit",
+    "firebase_host": "wireit",
+    "paasBuild": "wireit"
   },
+  "wireit": {
+    "esbuild": {"command": "esbuild src/App.jsx --bundle --outfile=out.js"},
+    "start": {"command": "react-scripts start"},
+    "build": {"command": "react-scripts build",
+      "dependencies": ["esbuild", "test"]
+    },
+    "test": {"command": "react-scripts test"},
+    "eject": {"command": "react-scripts eject"},
+    "lint": {"command": "eslint --ext .js,.jsx,.ts,.tsx ./src >2"},
+
+    "firebase_host" : {"command": "firebase deploy -p build -m 'message add '"},
+    "wrangler": {"command": "npx wrangler pages publish build"},
+    "vercel": {"command": "npx vercel deploy --prod"},
+    "netlify": {"command": "npx "},
+    "paasBuild": {"command": "ls ", "dependencies":["vercel", "wrangler", "netlify", "firebase_host"]}
+  }
+
+  ,
+
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -52,7 +77,8 @@
     "eslint-plugin-react": "^7.29.2",
     "eslint-plugin-react-hooks": "^4.3.0",
     "stylelint-config-standard": "^26.0.0",
-    "typescript": "^4.5.5"
+    "typescript": "^4.5.5",
+    "wireit": "^0.5.0"
   },
   "volta": {
     "node": "16.15.1"
