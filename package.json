@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "airtable": "^0.11.2",
     "axios": "^0.26.1",
+    "esbuild": "^0.14.43",
     "jotai": "^1.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -19,6 +20,7 @@
     "web3": "^1.7.3"
   },
   "scripts": {
+    "esbuild": "esbuild src/App.jsx --bundle --outfile=out.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
