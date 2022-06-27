@@ -6,6 +6,8 @@ https://github.com/miquolone/bpp-server
 BPP-front
 https://github.com/miquolone/bpp-front
 
+server/front分離前のレポジトリ
+https://github.com/miquolone/bpp
 
 ### 更新
 
@@ -31,5 +33,8 @@ wireitを用いてsilial実行を行
   firebase deploy -p build -m 'message add '
 
 - netlify(github integrationで設定済み) 
+
+
+
 
 
